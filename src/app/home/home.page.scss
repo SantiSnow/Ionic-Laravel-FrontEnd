@@ -1,0 +1,32 @@
+#main-login{
+    display: flex;
+    justify-content: center;
+}
+
+#login-button{
+    width: 90%;
+    margin: auto;
+}
+
+#reset{
+    width: 90%;
+    margin: auto;
+}
+
+.input-container{
+    width: 95%;
+}
+
+#form-div{
+    margin: 35% 0 15% 0;
+}
+
+#errors{
+    display: none;
+    color: rgb(131, 0, 0);
+}
+
+#about{
+    width: 90%;
+    margin: auto;
+}

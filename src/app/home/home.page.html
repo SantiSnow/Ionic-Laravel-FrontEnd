@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="main-login">
+    <h1>Inicio de sesión</h1>
+  </div>
+
+  <div id="form-div">
+    <ion-item class="input-container">
+      <ion-label position="floating">Usuario / Email</ion-label>
+      <ion-input type="text" [(ngModel)]="user"></ion-input>
+    </ion-item>
+
+    <ion-item class="input-container">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </div>
+
+  <div id="errors">
+
+  </div>
+
+  <ion-button id="login-button" expand="block" (click)="login()">Login</ion-button>
+  <br/>
+  <ion-button color="danger" expand="block" id="reset">Limpiar Campos</ion-button>
+
+  <br />
+  <br />
+  <ion-button id="about" color="light" expand="block" [routerLink]="['/about']">Sobre la app</ion-button>
+
+</ion-content>
