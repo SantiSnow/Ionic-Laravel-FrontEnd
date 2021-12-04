@@ -9,9 +9,23 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Bienvenido</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+  <ion-list>
+    <ion-list-header>
+      Tus tareas...
+    </ion-list-header>
+    <ion-item *ngFor="let i of tasks">
+      <ion-label>
+        <h2>{{ i.title}}</h2>
+        <h3>{{ i.done == 1 ? 'Realizada' : 'Pendiente' }}</h3>
+        <p>Creada el: {{ i.created_at }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
 </ion-content>
