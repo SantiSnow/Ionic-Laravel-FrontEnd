@@ -30,7 +30,6 @@ export class Tab1Page {
         console.log(err);
       }
     );
-    
   }
 
 }

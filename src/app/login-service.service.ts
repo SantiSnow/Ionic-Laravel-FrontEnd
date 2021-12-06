@@ -7,7 +7,7 @@ import { LoginResponse } from './models/LoginResponse';
 })
 export class LoginService {
 
-  loginUrl:string = "http://127.0.0.1:8000/login";
+  loginUrl:string = "http://127.0.0.1:8000/login_api";
 
   constructor(private httpClient: HttpClient) { }
 
