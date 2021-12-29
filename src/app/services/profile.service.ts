@@ -9,6 +9,7 @@ import { User } from '../models/User';
 export class ProfileService {
 
   tasksUrl = "http://127.0.0.1:8000/user_info";
+  contactsUrl = "http://127.0.0.1:8000/contacts";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -16,4 +17,9 @@ export class ProfileService {
   {
     return this.httpClient.post<User>(this.tasksUrl, { email: email});
   }
+
+  get_contacts()
+  {
+    return this.httpClient.get<User[]>(this.contactsUrl);
+  }  
 }

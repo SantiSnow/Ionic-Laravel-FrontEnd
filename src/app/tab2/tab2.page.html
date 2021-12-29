@@ -1,17 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Contactos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-list-header>
+      Tus Contactos:
+    </ion-list-header>
+    <ion-item *ngFor="let i of users">
+      <ion-label>
+        <h2>{{ i.name}}</h2>
+        <h3>{{ i.email }}</h3>
+        <p>Rol: {{ i.is_admin == 1 ? "Admin" : "Users" }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
